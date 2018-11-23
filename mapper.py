@@ -1,9 +1,9 @@
 import os
 import threading
 import shutil
+lock = threading.Lock()
 
 # Map function
-
 
 import os
 
@@ -18,6 +18,8 @@ def combine(maplist):
 		else:
 			res.append("{}, {}".format(value, count))
 			cur, count = value, 1
+	count -= 1
+	res.append("{}, {}".format(value, count))
 	return res
 
 def partition(mylist):

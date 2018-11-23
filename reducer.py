@@ -27,6 +27,7 @@ def start():
 			count += 1
 		wFile.write("{} {} {} {} {}".format("Taken together, it has", count, "different IP, has", total, "connections.\n"))
 	print("reducer done")
+	print("Taken together, it has", count, "different IP, has", total, "connections.")
 	
 if __name__ == '__main__':
 	start()

@@ -3,8 +3,7 @@ import mapper
 import reducer
 import shutil
 
-output = [[]] * 9
-
+output = [[] for _ in range(9) ] 
 def wirteFile(targetNum):
 	if (not output[targetNum]):
 		return 
@@ -30,12 +29,9 @@ def master():
 		for rline in rFile:
 			output[count % 9].append(rline)
 			count += 1
-			if (count == 999):
-				toWrite()
-				count = 0
 
-	if (output[0]):
-		toWrite()
+	toWrite()
+
 
 if __name__ == '__main__':
 	master()
